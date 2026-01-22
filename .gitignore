@@ -1,0 +1,113 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+cellseg/
+.venv/
+
+# PyTorch
+*.pth
+*.pth.tar
+*.pt
+checkpoints/
+*.ckpt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data and Results
+data/
+Datasets/
+Original/
+Mask/
+Augmented/
+Predictions/
+enhanced_results/
+test_dir/
+Models/
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.npy
+*.npz
+
+# Logs
+*.log
+logs/
+tensorboard_logs/
+training_*.log
+
+# Results and Outputs
+results/
+outputs/
+*.pptx
+*.docx
+*.pdf
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Efficiency metrics
+efficiency_metrics/
+*.csv
+*.txt
+!requirements.txt
+!README.md
+!SETUP.md
+
+# Backup directories
+Backup/
+backup/
+
+# Results directory
+1.Results/
+
+# Model files (keep structure but ignore large files)
+best_model.pth.tar
+checkpoint_*.pth.tar
+
+# Keep empty directories structure
+!checkpoints/.gitkeep
+!data/.gitkeep
+!predictions/.gitkeep
