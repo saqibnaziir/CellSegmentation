@@ -301,19 +301,6 @@ The model consists of:
 - **Spatial Attention**: Spatial feature refinement
 - **Attention Gates**: Skip connection refinement
 
-## 📊 Metrics
-
-The model is evaluated using multiple metrics:
-
-- **Jaccard Index (IoU)**: Intersection over Union
-- **Dice Coefficient**: 2 × Intersection / (Sum of Areas)
-- **Precision**: True Positives / (True Positives + False Positives)
-- **Recall**: True Positives / (True Positives + False Negatives)
-- **F1 Score**: Harmonic mean of Precision and Recall
-- **Hausdorff Distance (HD95)**: 95th percentile boundary distance
-- **Average Surface Distance (ASD)**: Average boundary distance
-- **Volume Similarity (VS)**: Volume overlap measure
-- **Mean Surface Distance (MSD)**: Mean boundary distance
 
 ## 🔬 Citation
 
@@ -336,7 +323,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👥 Authors
 
 - **Saqib Nazir** - [saqib.nazir@edgehill.ac.uk](mailto:saqib.nazir@edgehill.ac.uk)
-- **Ardhendu Behera** - [beheraa@edgehill.ac.uk](mailto:beheraa@edgehill.ac.uk)
 
 **Affiliation**: Department of Computer Science, Edge Hill University, St Helens Road, Ormskirk, UK
 
@@ -350,7 +336,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For questions, issues, or collaborations, please contact:
 - **Saqib Nazir**: saqib.nazir@edgehill.ac.uk
-- **Ardhendu Behera**: beheraa@edgehill.ac.uk
 
 ## 🐛 Troubleshooting
 
