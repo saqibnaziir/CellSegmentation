@@ -115,9 +115,9 @@ data/
 ### Supported Datasets
 
 The code has been tested on:
-- **BCS** (Breast Cancer Segmentation)
-- **DSB 2018** (Data Science Bowl 2018)
-- **NuInsSeg** (Nuclei Instance Segmentation)
+- **BCS** (Breast Cancer Segmentation) https://github.com/Deponker/Blood-cell-segmentation-dataset
+- **DSB 2018** (Data Science Bowl 2018) https://bbbc.broadinstitute.org/BBBC038/
+- **NuInsSeg** (Nuclei Instance Segmentation) https://www.kaggle.com/datasets/ipateam/nuinsseg
 
 ## 💻 Usage
 
