@@ -320,10 +320,6 @@ If you use this code in your research, please cite:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Authors
-
-- **Saqib Nazir** - [saqib.nazir@edgehill.ac.uk](mailto:saqib.nazir@edgehill.ac.uk)
-
 **Affiliation**: Department of Computer Science, Edge Hill University, St Helens Road, Ormskirk, UK
 
 ## 🙏 Acknowledgments
@@ -336,9 +332,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For questions, issues, or collaborations, please contact:
 - **Saqib Nazir**: saqib.nazir@edgehill.ac.uk
-
-## 🐛 Troubleshooting
-
 
 
 ---
