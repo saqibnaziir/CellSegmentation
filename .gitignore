@@ -95,6 +95,21 @@ efficiency_metrics/
 !requirements.txt
 !README.md
 !SETUP.md
+!QUICK_START.md
+
+# Analysis and documentation files (not needed in repo)
+QUICK_REFERENCE.md
+RESULTS_ANALYSIS.md
+efficiency_analysis.md
+readme.text
+
+# LaTeX files (paper writing, not code)
+*.tex
+!*.tex  # Allow if needed, but typically ignore
+
+# Utility scripts (optional - can be removed)
+add_noise.py
+binary.py
 
 # Backup directories
 Backup/
