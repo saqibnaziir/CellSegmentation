@@ -106,4 +106,3 @@ git remote add origin https://github.com/saqibnaziir/CellSegmentation.git
 
 Check `SETUP.md` for detailed instructions or contact:
 - **Saqib Nazir**: saqib.nazir@edgehill.ac.uk
-- **Ardhendu Behera**: beheraa@edgehill.ac.uk
