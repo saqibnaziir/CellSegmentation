@@ -339,34 +339,7 @@ For questions, issues, or collaborations, please contact:
 
 ## 🐛 Troubleshooting
 
-### Common Issues
 
-1. **CUDA Out of Memory**
-   - Reduce batch size: `--batch_size 2`
-   - Reduce image size: `--img_size 128`
-   - Use gradient accumulation (modify code)
-
-2. **Import Errors**
-   - Ensure all dependencies are installed: `pip install -r requirements.txt`
-   - Check Python version: `python --version` (should be 3.7+)
-
-3. **Dataset Loading Issues**
-   - Ensure image and mask filenames match exactly
-   - Check image formats (PNG recommended)
-   - Verify masks are binary (0 and 255)
-
-4. **Training Instability**
-   - Enable gradient clipping: `--grad_clip 1.0`
-   - Reduce learning rate: `--lr 0.00005`
-   - Use warmup: `--warmup_epochs 5`
-
-## 🔄 Updates
-
-- **v1.0.0** (2024): Initial release
-  - Attention-guided U-Net implementation
-  - Training and testing scripts
-  - Enhanced visualization tools
-  - Comprehensive documentation
 
 ---
 
