@@ -12,7 +12,9 @@ import os
 from scipy.ndimage import distance_transform_edt
 
 from dataset import CellSegmentationDataset
-from model import get_model
+# from model import get_model
+# from model import EfficientB6AttentionUnet
+from model import AttentionUnet
 
 # Setup logging
 logging.basicConfig(
@@ -183,7 +185,7 @@ def test_model(model, test_loader, device, save_dir, threshold=0.5):
 
 def get_args():
     """Parse command line arguments"""
-    parser = argparse.ArgumentParser(description='Test Cell Segmentation Model')
+    parser = argparse.ArgumentParser(description='Test AttentionUnet Cell Segmentation Model')
     
     # Data paths
     parser.add_argument('--test_dir', type=str, required=True,
@@ -194,10 +196,15 @@ def get_args():
                         help='Path to model checkpoint')
     
     # Model parameters
+    parser.add_argument('--encoder_type', type=str, default='efficientnet', 
+                        choices=['efficientnet', 'custom'],
+                        help='Choose encoder type: efficientnet (default) or custom')
+    parser.add_argument('--no_pretrained', action='store_true', 
+                        help='Disable pretrained weights for efficientnet')
+    
+    # Testing parameters
     parser.add_argument('--img_size', type=int, default=256,
-                        help='Image size')
-    parser.add_argument('--base_channels', type=int, default=64,
-                        help='Number of base channels in the model')
+                        help='Image size for testing')
     parser.add_argument('--batch_size', type=int, default=8,
                         help='Batch size for testing')
     parser.add_argument('--workers', type=int, default=4,
@@ -234,10 +241,18 @@ def main():
     )
     
     # Create model
-    model = get_model(
-        in_channels=1,
-        out_channels=1,
-        base_channels=args.base_channels
+    # model = get_model(
+    #     in_channels=1,
+    #     out_channels=1,
+    #     base_channels=args.base_channels
+    # ).to(device)
+    # model = EfficientB6AttentionUnet(pretrained=args.pretrained).to(device)
+    # model = EfficientB6AttentionUnet(pretrained=False).to(device)
+    # Create model - Updated to use AttentionUnet
+    logger.info(f"Creating model with encoder_type: {args.encoder_type}, pretrained: {not args.no_pretrained}")
+    model = AttentionUnet(
+        encoder_type=args.encoder_type,
+        pretrained=not args.no_pretrained
     ).to(device)
     
     # Load checkpoint
