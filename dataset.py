@@ -35,8 +35,17 @@ def load_image_safely(image_path):
             raise ValueError(f"Failed to load image: {image_path}")
     
     return img_array
+# --- progressive size helper ---#### for BBC 256, 512, 768, 1024
+class ProgressiveSize:
+    def __init__(self, sizes=(64,128,256, 512), epochs_per_size=20):
+        self.sizes = sizes
+        self.epochs_per_size = epochs_per_size
+    def __call__(self, epoch):
+        idx = min(epoch // self.epochs_per_size, len(self.sizes) - 1)
+        return self.sizes[idx]
+    
 class CellSegmentationDataset(Dataset):
-    def __init__(self, original_dir, mask_dir, img_size=256, is_training=True):
+    def __init__(self, original_dir, mask_dir, img_size=64, is_training=True):
         """Dataset for cell segmentation - no augmentation since data is pre-augmented"""
         self.original_dir = Path(original_dir)
         self.mask_dir = Path(mask_dir)
